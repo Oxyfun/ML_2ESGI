@@ -1,0 +1,29 @@
+1. 
+La silhouette signifie que l'algo détecte deux groupes bien séparés : setosa et versicolor+virginica 
+de l'autre. 
+On retient k=3 car on sait qu'il y a 3 espèces réelles dans le jeu de données. Versicolor et Virginica sont fusionné
+
+2.
+Setosa est parfaitement retrouvée : les 50 fleurs
+tombent toutes dans le cluster 1. 
+Les versicolor et virginica se confondent partiellement : 
+14 virginica sont classées dans le cluster
+de versicolor et 11 versicolor dans celui de virginica.
+
+3.
+Les deux variables les plus discriminantes sont :
+petal length et petal width 
+
+4.
+- Cluster 1 : petites fleurs, valeurs très négatives sur toutes les mesures de pétales et sépales : correspond à setosa.
+- Cluster 2 : grandes fleurs, valeurs très positives sur petal length/width : correspond majoritairement à virginica.
+- Cluster 0 : fleurs intermédiaires, valeurs proches de 0 : correspond majoritairement à versicolor.
+
+5.
+Les deux méthodes donnent des ARI très proches sur Iris. Le dendrogramme montre une première coupure qui isole setosa du reste, puis une
+deuxième qui sépare versicolor et virginica (cohérent avec k=3)
+
+Bonus.
+Sans standardisation, l'ARI baisse car sepal length (cm) et petal length (cm)
+dominent le calcul des distances par leur plus grande échelle, ce qui fausse
+les clusters.
